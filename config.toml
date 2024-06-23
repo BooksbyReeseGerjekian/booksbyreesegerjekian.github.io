@@ -1,6 +1,5 @@
 baseURL = "https://booksbyreesegerjekian.github.io/"
 languageCode = "en-us"
-theme = "kitab"
 title = "Books by Reese Gerjekian"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
