@@ -2,17 +2,14 @@
 <h1 class="site-title text-center">{{- .Title -}}</h1>
 <div class="d-flex flex-row justify-content-center row">
   {{ range .Site.Sections.ByWeight }}
-  <div
-    class="m-4 p-4 rounded bg-secondary"
-    style="min-width: 300px; width: 40%"
-  >
+  <div class="m-4 p-4 rounded bg-secondary" style="min-width: 300px; width: 40%;">
     <a href="{{ .Permalink }}">
+      <img src="{{ .Params.bookCover }}" alt="{{ .Title }}" style="width: 200px; height: 300px; object-fit: cover; margin: 0 auto; display: block;"/>
       <h4 class="mb-0 p-0">{{ .Title | markdownify }}</h4>
     </a>
     <div class="text-right">
       <small>
-        - {{ .Params.author }} ({{ .Date.Format (default "2006-May-13"
-        $.Site.Params.dateFormat) }})
+        - {{ .Params.author }} ({{ .Date.Format (default "2006-May-13" $.Site.Params.dateFormat) }})
       </small>
     </div>
     {{ partial "chapterlist.html" . }}
